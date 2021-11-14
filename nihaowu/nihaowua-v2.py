@@ -45,8 +45,9 @@ def main(): #写入txt文本程序
     #             f.write(content + '\n')
     #             count += 1
     #             print('********正在爬取中，这是第{}次爬取********'.format(count))
+    filename=input("输入存入的文件名称：")
     while True:
-        with open("NiHaoWu2.txt", "a") as f:
+        with open(filename, "a",encoding='utf-8') as f:
                 sleep_time=random.random()*2
                 time.sleep(sleep_time)
                 res = requests.get(url=url, headers=headers,timeout=10)
